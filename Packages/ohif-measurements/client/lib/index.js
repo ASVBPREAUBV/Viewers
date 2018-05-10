@@ -1,6 +1,7 @@
 import './jumpToRowItem';
 import './activateMeasurements';
 import './clearCornerstoneToolState';
+import './createTimepointForUnicStudyInstanceUID';
 import './deactivateAllToolData';
 import './exportPdf';
 import './findAndRenderDisplaySet';
