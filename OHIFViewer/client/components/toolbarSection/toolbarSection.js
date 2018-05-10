@@ -52,9 +52,11 @@ Template.toolbarSection.helpers({
             key: 'rightSidebar',
             value: instance.data.state,
             options: [{
-                value: 'hangingprotocols',
-                iconClasses: 'fa fa-cog',
-                bottomLabel: 'Hanging'
+                value: 'measurements',
+                svgLink: '/packages/ohif_viewerbase/assets/icons.svg#icon-measurements-lesions',
+                svgWidth: 18,
+                svgHeight: 10,
+                bottomLabel: 'Measurements'
             }]
         };
     },
