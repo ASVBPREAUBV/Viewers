@@ -5,14 +5,15 @@
   justify-content: space-around
   padding-top: 2px
   position: relative
+  margin: 0.8em 0
 
-  .timepointName, .timepointDate
+  .timepointDateLabel, .timepointDate
     theme('border-left', '%s solid $uiBorderColor' % $uiBorderThickness)
     font-weight: 400
     padding-left: 12px
     text-align: left
 
-  .timepointName
+  .timepointDateLabel
     theme('color', '$textSecondaryColor')
     font-size: 12px
     line-height: 12px
@@ -23,7 +24,3 @@
     line-height: 20px
     padding-bottom: 6px
 
-  .case-progress-container
-    position: absolute
-    right: 4px
-    top: 0

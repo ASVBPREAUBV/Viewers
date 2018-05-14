@@ -1,13 +1,10 @@
 <template name="measurementTableTimepointHeader">
     <div class="measurementTableTimepointHeader">
-        <div class="timepointName">
-            {{timepointName this}}
+        <div class="timepointDateLabel">
+            Study date:
         </div>
         <div  class="timepointDate">
             {{formatDA latestDate "DD-MMM-YY"}}
-        </div>
-        <div class="case-progress-container">
-            {{>caseProgress}}
         </div>
     </div>
 </template>

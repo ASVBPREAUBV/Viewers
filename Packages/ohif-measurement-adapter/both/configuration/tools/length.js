@@ -57,7 +57,7 @@ const displayFunction = data => {
 export const length = {
     id: 'length',
     name: 'Length',
-    toolGroup: 'temp',
+    toolGroup: 'allTools',
     cornerstoneToolType: 'length',
     schema: LengthSchema,
     options: {

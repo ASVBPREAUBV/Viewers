@@ -17,7 +17,7 @@ Template.measureFlow.onCreated(() => {
 
     const items = [
         'Abdomen/Chest Wall',
-        'Adrenal',
+        'Adrenalasdasdasdasd',
         'Bladder',
         'Bone',
         'Brain',

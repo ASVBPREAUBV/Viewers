@@ -57,7 +57,7 @@ const displayFunction = data => {
 export const ellipse = {
     id: 'ellipticalRoi',
     name: 'Ellipse',
-    toolGroup: 'temp',
+    toolGroup: 'allTools',
     cornerstoneToolType: 'ellipticalRoi',
     schema: EllipseSchema,
     options: {

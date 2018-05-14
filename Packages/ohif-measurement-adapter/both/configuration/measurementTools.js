@@ -1,5 +1,5 @@
-import { temp } from './toolGroups/temp';
+import { allTools } from './toolGroups/allTools';
 
 export const measurementTools = [
-    temp
+    allTools
 ];
