@@ -1,0 +1,15 @@
+{
+    "both": {
+        "Location": {}
+    },
+    "baseline": {
+        "TargetType": {},
+        "MaxTargetsPerOrgan": {
+            "limit": 999
+        },
+        "MaxTargets": {
+            "limit": 999
+        }
+    },
+    "followup": {}
+}
