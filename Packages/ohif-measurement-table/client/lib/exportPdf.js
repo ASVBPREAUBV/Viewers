@@ -19,24 +19,9 @@ OHIF.measurements.exportPdf = (measurementApi, timepointApi) => {
     const printMeasurement = (measurement, callback) => {
         OHIF.measurements.getImageDataUrl({ measurement }).then(imageDataUrl => {
             const imageId = OHIF.viewerbase.getImageIdForImagePath(measurement.imagePath);
-            const series = cornerstone.metaData.get('series', imageId);
-            const instance = cornerstone.metaData.get('instance', imageId);
-
-            let info = measurement.response;
-            if (!info) {
-                info = measurement.longestDiameter;
-                if (measurement.shortestDiameter) {
-                    info += ` × ${measurement.shortestDiameter}`;
-                }
-
-                info += ' mm';
-            }
-
-            info += ` (S:${series.seriesNumber}, I:${instance.instanceNumber})`;
-
-            let type = measurementApi.toolsGroupsMap[measurement.toolType];
-            type = type === 'targets' ? 'Target' : 'Non-target';
-
+            const info = measurement.response || '';
+            const type = measurementApi.toolsGroupsMap[measurement.toolType] || '';
+            
             report.printMeasurement({
                 type,
                 number: measurement.measurementNumber,
@@ -60,9 +45,7 @@ OHIF.measurements.exportPdf = (measurementApi, timepointApi) => {
         printMeasurement(measurement, callback);
     };
 
-    const targets = measurementApi.fetch('targets', { timepointId });
-    const nonTargets = measurementApi.fetch('nonTargets', { timepointId });
-    const measurements = targets.concat(nonTargets);
+    const measurements = measurementApi.fetch('allTools', { timepointId });
     const iterator = measurements[Symbol.iterator]();
 
     processMeasurements(() => report.save('measurements.pdf'));

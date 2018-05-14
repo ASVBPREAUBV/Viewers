@@ -30,7 +30,7 @@
         {{/each}}
     {{/let}}
     {{#unless this.isHud}}
-        {{#if or (hasMeasurements 'targets') (hasMeasurements 'nonTargets')}}
+        {{#if (hasMeasurements 'allTools')}}
             <div class="report-area">
                 <div class="btn btn-sm js-pdf">Generate Report</div>
             </div>
