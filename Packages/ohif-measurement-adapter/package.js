@@ -24,7 +24,7 @@ Package.onUse(function(api) {
     api.use('ohif:core');
     api.use('ohif:cornerstone-settings');
     api.use('ohif:studies');
-    api.use('ohif:measurements');
+    api.use('ohif:measurement-table');
 
     api.addFiles('both/index.js', [ 'client', 'server' ]);
 
