@@ -1,3 +1,3 @@
 export const validateMeasurements = () => {
-    console.log('validateMeasurements');
+    OHIF.log.info('validateMeasurements');
 };
