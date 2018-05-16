@@ -3,7 +3,7 @@ import { _ } from 'meteor/underscore';
 
 import { OHIF } from 'meteor/ohif:core';
 
-import { schema as TimepointSchema } from 'meteor/ohif:measurement-table/both/schema/timepoints';
+import { schema as TimepointSchema } from '../schema/timepoints';
 
 const configuration = {};
 

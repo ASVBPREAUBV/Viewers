@@ -1,5 +1,5 @@
 import { OHIF } from 'meteor/ohif:core';
-import { MeasurementReport } from 'meteor/ohif:measurement-table/client/reports/measurement';
+import { MeasurementReport } from '../reports/measurement';
 
 OHIF.measurements.exportPdf = (measurementApi, timepointApi) => {
     const currentTimepoint = timepointApi.current();

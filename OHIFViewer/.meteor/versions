@@ -88,7 +88,6 @@ ohif:hanging-protocols@0.0.1
 ohif:header@0.0.1
 ohif:hotkeys@0.0.1
 ohif:log@0.0.1
-ohif:measurement-adapter@0.0.1
 ohif:measurement-table@0.0.1
 ohif:metadata@0.0.1
 ohif:polyfill@0.0.1

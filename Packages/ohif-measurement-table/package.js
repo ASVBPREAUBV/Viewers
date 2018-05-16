@@ -5,7 +5,7 @@ Npm.depends({
 
 Package.describe({
     name: 'ohif:measurement-table',
-    summary: 'OHIF Measurement Table Tracker',
+    summary: 'OHIF Measurement table',
     version: '0.0.1'
 });
 
@@ -18,9 +18,8 @@ Package.onUse(function(api) {
     api.use('stylus');
     api.use('random');
 
-    api.use('momentjs:moment');
-
     api.use('validatejs');
+    api.use('momentjs:moment');
 
     // Schema for Data Models
     api.use('aldeed:simple-schema');
@@ -30,20 +29,24 @@ Package.onUse(function(api) {
     api.use('aldeed:template-extension@4.0.0');
 
     // Our custom packages
-    api.use('ohif:cornerstone');
     api.use('ohif:design');
+    api.use('ohif:cornerstone');
     api.use('ohif:core');
+    api.use('ohif:cornerstone-settings');
+    api.use('ohif:studies');
     api.use('ohif:select-tree');
     api.use('ohif:log');
-    api.use('ohif:studies');
     api.use('ohif:hanging-protocols');
     api.use('ohif:viewerbase');
 
-    // Client and server imports
-    api.addFiles('both/index.js', ['client', 'server']);
+    api.addFiles('both/index.js', [ 'client', 'server' ]);
 
-    // Client imports
+    api.addFiles('server/index.js', 'server');
+
     api.addFiles('client/index.js', 'client');
 
+    // Export client-side collections
+    api.export('LesionLocations', 'client');
+    api.export('LocationResponses', 'client');
     api.export('MeasurementSchemaTypes', ['client', 'server']);
 });
