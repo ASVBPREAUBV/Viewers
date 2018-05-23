@@ -15,7 +15,7 @@ Have questions?  Try posting on our [google groups forum](https://groups.google.
 
 ## local demo
 
-to run a local demo with connection to a dicom-server [orthanc](https://www.orthanc-server.com/index.php) run:
+to run a local demo with connection to a dicom-server [(orthanc server)](https://www.orthanc-server.com/index.php) run:
 
 ```
     docker-compose up
