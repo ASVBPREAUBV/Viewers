@@ -21,4 +21,5 @@ to run a local demo with connection to a dicom-server [(orthanc server)](https:/
     docker-compose up
 ```
 
-
+## Run on server as superuser
+METEOR_PACKAGE_DIRS="../Packages" meteor --allow-superuser --settings ../config/orthancDICOMWeb.json
